@@ -9,7 +9,7 @@ This Flutter app allows users to efficiently manage tasks using a modern MVVM ar
 - **State Management**: Riverpod to manage state for tasks and preferences.
 - **Responsive UI**: Adapts to both mobile and tablet screens.
 - **Additional Features**:
-  - **Search and Filter**: Easily search and filter tasks based on criteria like name, date, or priority.
+  - **Search and Filter**: Easily search and filter tasks based on criteria like name, description.
   - **Local Notifications**: Receive reminders for tasks via local notifications.
 
 ## Technical Stack
