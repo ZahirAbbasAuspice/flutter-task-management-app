@@ -8,6 +8,9 @@ This Flutter app allows users to efficiently manage tasks using a modern MVVM ar
   - **Hive** for user preferences (theme and sort order).
 - **State Management**: Riverpod to manage state for tasks and preferences.
 - **Responsive UI**: Adapts to both mobile and tablet screens.
+- **Additional Features**:
+  - **Search and Filter**: Easily search and filter tasks based on criteria like name, description.
+  - **Local Notifications**: Receive reminders for tasks via local notifications.
 
 ## Technical Stack
 - **Flutter**: Dart-based UI framework.
@@ -37,3 +40,15 @@ This Flutter app allows users to efficiently manage tasks using a modern MVVM ar
 - **Model**: Task and UserPreference models.
 - **ViewModel**: Business logic and state management.
 - **View**: Flutter UI components for task listing and management.
+
+## Screenshots
+
+### Home Screen
+![Home Screen](assets/screenshots/home_screen.jpg)
+![Home Screen Dark](assets/screenshots/home_screen_dark.jpg)
+
+### Add/Edit Task Screen
+![Add Task Screen](assets/screenshots/add_screen_dark.jpg)
+![Edit Task Screen](assets/screenshots/edit_screen.jpg)
+
+
