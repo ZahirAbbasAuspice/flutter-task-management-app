@@ -40,3 +40,15 @@ This Flutter app allows users to efficiently manage tasks using a modern MVVM ar
 - **Model**: Task and UserPreference models.
 - **ViewModel**: Business logic and state management.
 - **View**: Flutter UI components for task listing and management.
+
+## Screenshots
+
+### Home Screen
+![Home Screen](assets/screenshots/home_screen.jpg)
+![Home Screen Dark](assets/screenshots/home_screen_dark.jpg)
+
+### Add/Edit Task Screen
+![Add Task Screen](assets/screenshots/add_screen_dark.jpg)
+![Edit Task Screen](assets/screenshots/edit_screen.jpg)
+
+
