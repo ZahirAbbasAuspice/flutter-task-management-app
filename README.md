@@ -44,11 +44,9 @@ This Flutter app allows users to efficiently manage tasks using a modern MVVM ar
 ## Screenshots
 
 ### Home Screen
+![Mockup Screen](assets/screenshots/mokup.jpg)
 ![Home Screen](assets/screenshots/home_screen.jpg)
 ![Home Screen Dark](assets/screenshots/home_screen_dark.jpg)
 
-### Add/Edit Task Screen
-![Add Task Screen](assets/screenshots/add_screen_dark.jpg)
-![Edit Task Screen](assets/screenshots/edit_screen.jpg)
 
 
