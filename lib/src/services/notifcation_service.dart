@@ -17,10 +17,10 @@ class NotificationService {
   }
 
   static Future<void> initialize() async {
-    tz.initializeTimeZones();
+    /* tz.initializeTimeZones();
     String timeZoneName = await FlutterTimezone.getLocalTimezone();
     tz.setLocalLocation(tz.getLocation(timeZoneName));
-    debugPrint('Timezone initialized: $timeZoneName');
+    debugPrint('Timezone initialized: $timeZoneName');*/
 
     const AndroidInitializationSettings androidInitializationSettings =
         AndroidInitializationSettings("@mipmap/ic_launcher");
@@ -103,14 +103,26 @@ class NotificationService {
     required String body,
     required DateTime scheduledTime,
   }) async {
-    final tz.TZDateTime scheduleDate =
-        tz.TZDateTime.from(scheduledTime, tz.local);
     try {
+      await _notificationsPlugin.show(
+        0,
+        'Test Notification',
+        'This is a test notification body',
+        const NotificationDetails(
+          android: AndroidNotificationDetails(
+            'test_channel',
+            'Test Notifications',
+            channelDescription:
+                'This channel is used for testing notifications',
+          ),
+        ),
+      );
+
       await _notificationsPlugin.zonedSchedule(
         id,
         title,
         body,
-        scheduleDate,
+        tz.TZDateTime.from(scheduledTime, tz.local),
         const NotificationDetails(
           iOS: DarwinNotificationDetails(),
           android: AndroidNotificationDetails(

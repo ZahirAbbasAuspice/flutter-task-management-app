@@ -6,6 +6,7 @@ import 'package:zybra_task_app/src/providers/preferences_provider.dart';
 import 'package:zybra_task_app/src/services/notifcation_service.dart';
 import 'package:zybra_task_app/src/theme/app_theme.dart';
 import 'package:zybra_task_app/src/views/home_view.dart';
+import 'package:timezone/data/latest.dart' as tz;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,6 +18,7 @@ void main() async {
   Hive.registerAdapter(PreferencesAdapter());
   await Hive.openBox<Preferences>('preferences');
   await NotificationService.initialize();
+  tz.initializeTimeZones();
 
   runApp(const ProviderScope(child: MyApp()));
 }
