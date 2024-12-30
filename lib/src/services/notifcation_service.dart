@@ -111,7 +111,6 @@ class NotificationService {
         title,
         body,
         scheduleDate,
-        androidAllowWhileIdle: true,
         const NotificationDetails(
           iOS: DarwinNotificationDetails(),
           android: AndroidNotificationDetails(
@@ -125,6 +124,7 @@ class NotificationService {
         matchDateTimeComponents: DateTimeComponents.dateAndTime,
         uiLocalNotificationDateInterpretation:
             UILocalNotificationDateInterpretation.absoluteTime,
+        androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
       );
       debugPrint('Notification scheduled successfully!');
     } catch (e) {
