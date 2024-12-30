@@ -42,8 +42,6 @@ class NotificationService {
         .resolvePlatformSpecificImplementation<
             AndroidFlutterLocalNotificationsPlugin>()
         ?.requestNotificationsPermission();
-
-    await _notificationsPlugin.initialize(initializationSettings);
   }
 
   static Future<void> _checkNotificationPermission() async {
@@ -115,6 +113,7 @@ class NotificationService {
         scheduleDate,
         androidAllowWhileIdle: true,
         const NotificationDetails(
+          iOS: DarwinNotificationDetails(),
           android: AndroidNotificationDetails(
             'task_channel',
             'Task Notifications',
