@@ -104,20 +104,6 @@ class NotificationService {
     required DateTime scheduledTime,
   }) async {
     try {
-      await _notificationsPlugin.show(
-        0,
-        'Test Notification',
-        'This is a test notification body',
-        const NotificationDetails(
-          android: AndroidNotificationDetails(
-            'test_channel',
-            'Test Notifications',
-            channelDescription:
-                'This channel is used for testing notifications',
-          ),
-        ),
-      );
-
       await _notificationsPlugin.zonedSchedule(
         id,
         title,
